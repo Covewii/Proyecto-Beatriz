@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro de Usuario</title>
+</head>
+<body>
+    <h1>Crear Cuenta</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label>Usuario</label>
+        {{ form.username }}
+        {% if form.username.errors %}
+            <div style="color: red;">{{ form.username.errors }}</div>
+        {% endif %}
+
+        <label>Email</label>
+        {{ form.email }}
+        {% if form.email.errors %}
+            <div style="color: red;">{{ form.email.errors }}</div>
+        {% endif %}
+
+        <label>Contraseña</label>
+        {{ form.password1 }}
+        {% if form.password1.errors %}
+            <div style="color: red;">{{ form.password1.errors }}</div>
+        {% endif %}
+
+        <label>Valida Contraseña</label>
+        {{ form.password2 }}
+        {% if form.password2.errors %}
+            <div style="color: red;">{{ form.password2.errors }}</div>
+        {% endif %}
+
+        <button type="submit">Registrarse</button>
+    </form>
+
+    <p><a href="{% url 'InicioSesion' %}">¿Ya tienes cuenta? Inicia sesión aquí.</a></p>
+</body>
+</html>
