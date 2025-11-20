@@ -1,0 +1,29 @@
+# Archivos de base de datos comunes
+*.db
+*.sqlite
+*.sqlite3
+*.mdb
+*.accdb
+
+# Archivos de configuración con credenciales
+config.py
+settings.json
+.env
+secrets.json
+
+# Archivos CSV o JSON con datos sensibles
+datos.csv
+datos.json
+usuarios.json
+productos.json
+
+# Si tienes una carpeta específica para datos
+/data/
+/Databases/
+
+# Si usas Django
+db.sqlite3
+*.sqlite3-journal
+
+# Si usas Flask con SQLAlchemy
+instance/
