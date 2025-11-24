@@ -9,4 +9,7 @@ urlpatterns = [
     path('InicioSesion/', views.InicioSesion, name='InicioSesion'),
     path('Registro/', views.registro, name='Registro'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('perfil/', views.perfil, name='perfil'),
+    path('gasto/nuevo/', views.agregar_gasto, name='agregar_gasto'),
+    path('ingreso/nuevo/', views.agregar_ingreso, name='agregar_ingreso'),
 ]

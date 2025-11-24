@@ -7,6 +7,17 @@
     {% if user.is_authenticated %}
         <h1>Bienvenido, {{ user.username }}!</h1>
         <p>Has iniciado sesión correctamente.</p>
+        
+        
+        <nav>
+            <h3>Gestión Financiera:</h3>
+            <ul>
+                <li><a href="{% url 'perfil' %}">📝 Completar Mi Perfil</a></li>
+                <li><a href="{% url 'agregar_gasto' %}">💸 Registrar Gasto</a></li>
+                <li><a href="{% url 'agregar_ingreso' %}">💰 Registrar Ingreso</a></li>
+            </ul>
+        </nav>
+
         <form method="post" action="{% url 'logout' %}">
             {% csrf_token %}
             <button type="submit">Cerrar sesión</button>

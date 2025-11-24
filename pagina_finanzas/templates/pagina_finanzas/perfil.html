@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Perfil</title>
+</head>
+<body>
+    <h1>Completar Perfil</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar Perfil</button>
+    </form>
+    <a href="{% url 'inicio' %}">Volver al Inicio</a>
+</body>
+</html>
