@@ -32,7 +32,8 @@ def InicioSesion(request):
     return render(request, 'pagina_finanzas/InicioSesion.html', {'form': form})
 
 def inicio(request):
-    return render(request, 'pagina_finanzas/inicio.html')
+    mostrar = 'hola soy sebas'
+    return render(request, 'pagina_finanzas/inicio.html',{'mostrar':mostrar})
 
 def perfil(request):
     if request.method == "POST":
@@ -68,4 +69,6 @@ def agregar_ingreso(request):
             return redirect('inicio')
     else:
         form = IngresoForm()
+        
     return render(request, 'pagina_finanzas/agregar_ingreso.html', {'form': form})
+
